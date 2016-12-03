@@ -1,0 +1,313 @@
+/**
+ * mchorse.github.io style sheet
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+/* Global styles */
+
+*
+{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body
+{
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+ul
+{
+    list-style: none;
+}
+
+a
+{
+    color: #888;
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: #aaa;
+}
+
+/* Common styles */
+
+.clear:after
+{
+    clear: both;
+    content: "";
+    visibility: hidden;
+    
+    display: block;
+    height: 0px;
+    width: 100%;
+}
+
+.left  { float: left  }
+.right { float: right }
+
+.centered { text-align: center }
+
+/* Header */
+
+.header-menu
+{
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.header-menu li a
+{
+    border-top: 2px solid transparent;
+    color: #ddd;
+    
+    display: block;
+    padding: 8px 12px;
+}
+
+.header-menu li a:hover
+{
+    border-top: 2px solid #fff;
+    color: #fff;
+}
+
+.header-dark li a
+{
+    color: #333;
+}
+
+.header-dark li a:hover
+{
+    border-top: 2px solid #000;
+    color: #000;
+}
+
+/* Main stuff */
+
+.wrapper
+{
+    margin: 0px auto;
+    width: 900px;
+}
+
+/* Blog */
+
+.blog_post
+{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    
+    margin-bottom: 2em;
+    margin-top: 1em;
+}
+
+.blog_post p,
+.blog_post ul
+{
+    line-height: 1.5em;
+    
+    margin-bottom: 1em;
+}
+
+.blog_post ul
+{
+    list-style: disc;
+    margin-left: 1.5em;
+}
+
+.blog_post ul li
+{
+    margin-bottom: 0.5em;
+}
+
+.blog_post h2
+{
+    font-size: 32px;
+}
+
+.blog_post h1,
+.blog_post h2,
+.blog_post h3,
+.blog_post h4,
+.blog_post h5,
+.blog_post h6
+{
+    font-weight: normal;
+    
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+.blog_post code
+{
+    background-color: #f8f8f8;
+    border-radius: 2px;
+    font-size: 0.9em;
+    font-family: Menlo, Monaco, monospace;
+    
+    padding: 2px 3px;
+}
+
+.blog_bigger
+{
+    width: 800px;
+}
+
+.blog_bigger p
+{
+    font-size: 16px;
+}
+
+.blog_bigger h1
+{
+    font-size: 38px;
+}
+
+/* Other */
+
+.blog_main
+{
+    float: left;
+    padding-right: 10px;
+    width: 75%;
+}
+
+.blog_sidebar
+{
+    float: right;
+    padding-left: 10px;
+    width: 25%;
+}
+
+.blog_post .label-right
+{
+    text-align: right;
+}
+
+.blog_post .label
+{
+    color: #ccc;
+    font-size: 20px;
+    font-weight: normal;
+    
+    margin: 0px;
+    margin-bottom: 0.75em;
+}
+
+/* Details */
+
+.details
+{
+    border: 0px;
+    font-size: 12px;
+    
+    width: 100%;
+}
+
+.details-field
+{
+    text-align: left;
+    vertical-align: top;
+}
+
+.details-value
+{
+    color: #888;
+    text-align: right;
+    padding-bottom: 0.5em;
+}
+
+/* Blockbuster stuff */
+
+.blockbuster .banner
+{
+    background: url('img/background.png');
+}
+
+.metamorph .banner
+{
+    background: url('img/metamorph.png');
+    background-position: -100px bottom;
+}
+
+.banner img
+{
+    display: block;
+    margin: 0px auto;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+}
+
+.blockbuster .banner img
+{
+    padding-bottom: 2em;
+}
+
+.download-button
+{
+    background-color: #e9d236;
+    border-radius: 4px;
+    box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.3);
+    color: #000;
+    font-size: 14px;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    
+    display: block;
+    margin-bottom: 0.5em;
+    padding: 0.5em 0.75em;
+}
+
+.download-button:hover
+{
+    background-color: #fae764;
+}
+
+/* Footer */
+
+.footer
+{
+    background: url('img/background.png');
+    color: #fff;
+    font-size: 14px;
+}
+
+.footer .header-menu
+{
+    margin-left: -12px;
+}
+
+.footer-social
+{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.footer-twitter
+{
+    margin-right: 0.7em;
+}
+
+.footer-info
+{
+    color: #888;
+    font-size: 12px;
+    
+    padding-bottom: 1em;
+}
+
+.footer-info a
+{
+    color: #ccc;
+}
+
+.footer-info a:hover
+{
+    color: #fff;
+}
