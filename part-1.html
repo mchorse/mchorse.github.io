@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style type='text/css'>
+/*
+Copyright (c) 2012-2013 Nima Yousefi & John August
+
+Permission is hereby granted, free of charge, to any person obtaining a copy 
+of this software and associated documentation files (the "Software"), to 
+deal in the Software without restriction, including without limitation the 
+rights to use, copy, modify, merge, publish, distribute, sublicense, and/or 
+sell copies of the Software, and to permit persons to whom the Software is 
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in 
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING 
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS 
+IN THE SOFTWARE.
+*/
+
+* {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+}
+html {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #fff;
+	color: #3e3e3e;
+	font: 14px/1.0em 'Courier Prime', serif;
+	padding: 0;
+	margin: 0;
+}
+article {
+	padding: 0px 0;
+	margin: 0;
+}
+section {
+	padding: 0 0 0 40px;
+	width: 600px;
+	margin-right: auto;
+	margin-left: auto;
+}
+p {
+	margin: 1.3em auto;
+	word-wrap: break-word;
+	padding: 0 10px;
+}
+body > p:first-child {
+	margin-top: 0;
+}
+.scene-heading, .transition, .new-act, .end-of-act, .character {
+	text-transform: uppercase;
+}
+
+.transition {
+	text-align: right;
+}
+
+.new-act, .end-of-act {
+	text-align: center;
+}
+
+.character {
+	margin: 1.3em auto 0;
+	width: 180px;
+}
+
+.dialogue {
+	margin: 0 auto;
+	width: 310px;
+}
+
+.parenthetical {
+	margin: 0 auto;
+	width: 250px;
+}
+
+.scene-heading {
+	margin-top: 2.6em;
+	font-weight: bold;
+	position: relative;
+	padding-right: 40px;
+}
+.scene-number-left {
+	float: left;
+	margin-left: -50px;
+}
+.scene-number-right {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.lyrics {
+    font-style: italic;
+    text-align: center;
+}
+#script-title {
+    overflow: hidden;
+    display: block;
+    padding-bottom: 2.6em;
+    margin-bottom: 2.6em;
+}
+#script-title .title {
+    text-align: center;
+    margin: 1.3em 0;
+    text-transform: uppercase;
+}
+#script-title .credit {
+    text-align: center;
+}
+#script-title .authors {
+    text-align: center;
+}
+#script-title .source {
+    text-align: center;
+    padding-top: 1.3em;
+}
+#script-title .notes {
+    padding-top: 2.6em;
+}
+#script-title .notes {
+    white-space: pre-line !important;shape-rendering
+}
+
+.center {
+	text-align: center !important;
+}
+hr {
+    height: 0px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+.dual-dialogue {
+	overflow: hidden;
+}
+.dual-dialogue .dual-dialogue-left,
+.dual-dialogue .dual-dialogue-right {
+	width: 228px;
+	float: left;
+}
+.dual-dialogue p {
+	width: auto;
+}
+.dual-dialogue .character {
+	xtext-align: center;
+	padding-left: 40px;
+}
+.dual-dialogue .parenthetical {
+	padding-left: 40px;
+}
+p.page-break {
+    text-align: right;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+p.page-break-render {
+    text-align: right;
+    padding-top: 20px;
+    margin-top: 20px;
+}</style>
+</head>
+<body>
+<article>
+<section>
+<div id='script-title'><p class='title'>Untitled</p></div><p class='page-break'>1.</p>
+<p class='action'>Label appears in cyan.</p>
+<p class='action'>	Meow meow meow bark bark cluck...</p>
+<p class='action'>Fade in space background. Text scrolls á la Star Wars style. This text is supposed to be stupid, and carry very little meaning.</p>
+<p class='action'>	TNT Wars</p>
+<p class='action'>	Episode VII<br>	50,000 TNT VS 1 ISLAND</p>
+<p class='action'>	So there is this guy, named Rat Vader, who's like really badass and at the same time sinister guy. He wants... I guess cheese? I don't know this guy very well, so don't quote me on that. He's a mouse, by the way.</p>
+<p class='action'>	And so his flying Swiss cheese can carry lots of TNT, which presents danger to everyone. Since /gamerule mobGriefing = false, brave heroes should stop Rat Vader from destroying the universe. Oh, by the way, this happens in Minecraft, so you just knew.</p>
+<p class='action'>Text goes far in the space. </p>
+<p class='scene-heading'>EXT. FARM CLOSE TO A CLIFF</p>
+<p class='action'>The camera tilts downward until it reaches the horizon. Sunset. Luke looks at the sunset. A chicken comes over, and looks at the sunset too. Luke looked at it, and raised his arm to cover the eyes from sun. The chicken flapped its wing to cover its eyes too, and looked up on Luke sarcastically. Luke took a stick and punched the chicken out of the cliff.</p>
+<p class='character'>LUKE (VOICE SYNTH)</p>
+<p class='dialogue'>Lololol, don't mess with prankster-gangster.</p>
+<p class='action'>Luke enters his house.</p>
+<p class='transition'>FADE OUT TO:</p>
+<p class='scene-heading'>EXT. FOREST</p>
+<p class='action'>MC-3FX (golden fox) and O2-C2 (small owl) are passing in the forest. MC-3FX and O2-C2 were carrying a package, but they put it away.</p>
+<p class='page-break'>2.</p>
+<p class='character'>MC-3FX</p>
+<p class='dialogue'>That's a long road, O2-C2. Why does Princess Foxx wants us to deliver this package for some <em>hobo</em>?</p>
+<p class='action'>O2-C2 beeps something. They were passing pet store.</p>
+<p class='character'>MC-3FX</p>
+<p class='dialogue'>Look, O2-C2, a pet store. Oh, dear, there are so much food!... Put on your mask, we gonna rob this place.</p>
+<p class='action'>O2-C2 isn't really sure about this idea, but he was hungry anyways. Both of them putting their masks on, and breaking into the store. After a while and some noise, MC-3FX and O2-C2 are running out of the pet store with food. Unfortunately, animal control have surrounded them.</p>
+<p class='character'>ANIMAL CONTROL OFFICER</p>
+<p class='dialogue'>Put your paws and wings above your heads, and slowly put DOWN the food!</p>
+<p class='action'>Both of them drop their food. Both of them look pretty fucked up.</p>
+<p class='character'>MC-3FX</p>
+<p class='dialogue'>We're doomed!</p>
+<p class='action'>Animal control officer approach the animals, while menacing figure of Rat Vader is seen.</p>
+<p class='transition'>CROSS FADE TO:</p>
+<p class='scene-heading'>EXT. LUKE'S FARM</p>
+<p class='action'>Animal control came to Luke's farm sell animals. They ring in the bell. Luke comes out of the house.</p>
+<p class='character'>	LUKE</p>
+<p class='dialogue'>Yo, uncle, do we need animals?</p>
+<p class='action'>Uncle Shep comes out of the house.</p>
+<p class='character'>UNCLE SHEP</p>
+<p class='dialogue'>Yes, we do need animals. I didn't knew that we <em>actually</em> need to feed the previous animals.</p>
+<p class='page-break'>3.</p>
+<p class='character'>LUKE</p>
+<p class='dialogue'>Alright, we need one Doggo speaker and some small parrot or something.</p>
+<p class='character'>ANIMAL CONTROL OFFICER</p>
+<p class='dialogue'>We have this great golden MC-3FX, he claims to speak over 4 Doggo dialects.</p>
+<p class='action'>MC-3FX looks quite confused and blushes.</p>
+<p class='character'>ANIMAL CONTROL OFFICER</p>
+<p class='dialogue'>And we also have this S2-L4...</p>
+<p class='character'>UNCLE SHEP</p>
+<p class='dialogue'>We take them!</p>
+<p class='action'>Luke comes to S2-L4, and peeks at it for a while. The moment intensifies.</p>
+<p class='character'>LUKE</p>
+<p class='dialogue'>It's ugly. Let's take this one. What is its name?</p>
+<p class='character'>ANIMAL CONTROL	OFFICER</p>
+<p class='dialogue'>It's O2-C2... </p>
+<p class='character'>MC-3FX</p>
+<p class='dialogue'>You should take him, I was working with him together. Really great parrot.</p>
+<p class='character'>LUKE</p>
+<p class='dialogue'>Alright, we take this MC-3FX and O2-C2.</p>
+<p class='action'>Luke hands in some gold to the animal control officer.</p>
+<p class='character'>MC-3FX (TO O2-C2)</p>
+<p class='dialogue'>You should be grateful, otherwise you could've end up in the hands of some crazy old woman.</p>
+<p class='action'>O2-C2 stuck out his tongue. MC-3FX was quite irritated.</p>
+<p class='character'>UNCLE SHEP</p>
+<p class='dialogue'>Take care of these animals, meanwhile I'm going to make out with your aunt.</p>
+<p class='action'>Luke takes MC-3FX and O2-C2 into the house, meanwhile Uncle Shep waits for them to get out out of the sight.</p>
+<p class='page-break'>4.</p>
+</section>
+<section>
+<p class='scene-heading'>INT. LUKE'S GARAGE</p>
+<p class='action'>Luke took them to garage in order to clean them up. He turned on the water, and MC-3FX took a bath.</p>
+<p class='character'>LUKE</p>
+<p class='dialogue'>How did you end up captured by animal control?</p>
+<p class='character'>MC-3FX</p>
+<p class='dialogue'>It's a long story...</p>
+<p class='action'>O2-C2 excitingly beeped, telling whole story to Luke.</p>
+<p class='character'>MC-3FX</p>
+<p class='dialogue'>O2-C2, shut up! You'll get us into trouble.</p>
+<p class='character'>LUKE</p>
+<p class='dialogue'>Lololol, you're dope animals. Wait... what is this?</p>
+<p class='action'>O2-C2 holds a package needed to be delivered to Hobo Van. </p>
+<p class='character'>MC-3FX</p>
+<p class='dialogue'>Oh, dear. O2-C2, what is this?</p>
+<p class='action'>O2-C2 beeped something angrily.</p>
+<p class='character'>MC-3FX</p>
+<p class='dialogue'>You should've done it earlier, it's clearly anatomically possible, anyways... </p>
+<p class='parenthetical'>(speaking to Luke)</p>
+<p class='dialogue'>It's a package we need to deliver to Hobo Van.</p>
+<p class='character'>LUKE</p>
+<p class='dialogue'>Hm, never heard of him, lololol.</p>
+<p class='action'>Steps are heard from outside. Tension. Some homeless person tilts forward and looks into the window.</p>
+<p class='character'>LUKE</p>
+<p class='dialogue'>Get out, hobo! You're ugly, lololol.</p>
+<p class='character'>MC-3FX</p>
+<p class='dialogue'>Wait... that's Hobo Van. Let him in.</p>
+<p class='page-break'>5.</p>
+<p class='character'>HOBO VAN</p>
+<p class='dialogue'>Please! I want to eat. I'm starving!</p>
+<p class='action'>Luke opens the door into garage and let Hobo Van into the room. Luke gives him some food, and he eats the food.</p>
+<p class='character'>HOBO VAN</p>
+<p class='dialogue'>Thanks god! I was starving so much!</p>
+<p class='character'>MC-3FX</p>
+<p class='dialogue'>Is this the hobo we were looking for?</p>
+<p class='action'>O2-C2 beeped firmly.</p>
+<p class='character'>MC-3FX</p>
+<p class='dialogue'>Give him the package, then.</p>
+<p class='action'>O2-C2 puts a box on the ground. </p>
+<p class='character'>HOBO VAN</p>
+<p class='dialogue'>It must be food!</p>
+<p class='action'>Hobo Van opens a box, and a hologram of princess appears.</p>
+<p class='character'>HOBO VAN (IN PANIC)</p>
+<p class='dialogue'>It's dark magic!!!</p>
+<p class='action'>Hobo Van hides behind cover.</p>
+<p class='character'>PRINCESS FOXX</p>
+<p class='dialogue'>Commander Hobo, you've served greatly to my grandfather in the TNT war. My ship and crew was captured by the Duke Rat Vader. We need your help. The droids I sent you have very significant information about Duke's Swiss cheese's vulnerabilities. Could you escort them to Olderant? Please, Hobo Van, you're my only hope.</p>
+<p class='action'>Hologram of Princess Foxx idled for a second and disappeared. Hobo Van came out of his hiding place.</p>
+<p class='character'>HOBO VAN</p>
+<p class='dialogue'>Oh, haha, that was Princess Foxx, haha. Didn't expected to get delivery from her.</p>
+<p class='page-break'>6.</p>
+<p class='character'>LUKE</p>
+<p class='dialogue'>You've fought during the TNT war?</p>
+<p class='character'>HOBO VAN</p>
+<p class='dialogue'>Yes, I did. I used to be one of the greatest redstone engineer. Your father fought the war alongside me, too.</p>
+<p class='character'>LUKE</p>
+<p class='dialogue'>My father fixed ovens and microwaves for a living, lolol.</p>
+<p class='character'>HOBO VAN</p>
+<p class='dialogue'>That's what your uncle told you. He was the greatest redstone engineer in the army. Oh, that reminds me of something.</p>
+<p class='action'>Hobo Van hands in a command block.</p>
+<p class='character'>LUKE</p>
+<p class='dialogue'>What is this?</p>
+<p class='character'>HOBO VAN</p>
+<p class='dialogue'>That's your father's command block. This is a weapon of a redstone engineer. Such powerful that can destroy whole worlds.</p>
+<p class='action'>Luke places command block. Types in something. And a sheep spawns in the room.</p>
+<p class='character'>HOBO VAN</p>
+<p class='dialogue'>Be careful with this command block. Alright, we need to get going. We're going to Olderant.</p>
+<p class='character'>MC-3FX</p>
+<p class='dialogue'>Great! Finally we're going back to Princess.</p>
+<p class='action'>O2-C2 beeps something.</p>
+<p class='character'>MC-3FX</p>
+<p class='dialogue'>No O2-C2, no more detours, by the way, there are no penguins in the zoo.</p>
+<p class='action'>O2-C2 looks disappointed and annoyed. Hobo Van exits the building and so the animals. Luke follows them. </p>
+<p class='page-break'>7.</p>
+</section>
+<section>
+<p class='scene-heading'>EXT. LUKE'S FARM</p>
+<p class='action'>They're getting to a safe distance from the house.</p>
+<p class='character'>HOBO VAN</p>
+<p class='dialogue'>Luke, are you going with us?</p>
+<p class='character'>LUKE</p>
+<p class='dialogue'>I don't know, Uncle Shep holds me here.</p>
+<p class='action'>An explosion happens in the background. Luke walks toward the house. There's roasted body of Uncle Shep on the stairs.</p>
+<p class='character'>LUKE</p>
+<p class='dialogue'>Lololol what a loser, I told him to not make out with a toaster in front of the oven.</p>
+<p class='parenthetical'>(continuing...)</p>
+<p class='dialogue'>Well, I guess nothing holds me anymore, lolol.</p>
+<p class='action'>Luke decided to depart with Hobo Van. They took horses and leave the house.</p>
+<p class='transition'>FADE OUT TO:</p>
+<p class='scene-heading'>EXT. SAND PORT</p>
+<p class='action'>Hobo Van and Luke finally reached the space port. The port was controlled by the rat troopers. While they entering the port, three rat troopers stopped them.</p>
+<p class='character'>RAT TROOPER #1</p>
+<p class='dialogue'>Hello, we are looking for two animals. One Doggo speaking fox and a little owl.</p>
+<p class='character'>HOBO VAN</p>
+<p class='dialogue'>I don't know what are you talking about. These are my nephew and my two hobo friends. </p>
+<p class='action'>MC-3FX and O2-C2 magically turned into hobos. Rat trooper was at first shocked. Other two wasn't paying attention all the time.</p>
+<p class='character'>RAT TROOPER #1</p>
+<p class='dialogue'>But they were like a second ago were...</p>
+<p class='page-break'>8.</p>
+<p class='character'>RAT TROOPER #2</p>
+<p class='dialogue'>That's what happens when you eat too much cheese.</p>
+<p class='character'>RAT TROOPER #3 (TO HOBO VAN)</p>
+<p class='dialogue'>Move on, move on.</p>
+<p class='action'>They passed in.</p>
+<p class='character'>LUKE</p>
+<p class='dialogue'>What was that?</p>
+<p class='character'>HOBO VAN</p>
+<p class='dialogue'>That was my secret command block.</p>
+<p class='action'>MC-3FX and O2-C2 turned back into the animals.</p>
+<p class='character'>HOBO VAN</p>
+<p class='dialogue'>We need to find a smuggler who will get us to Olderant. Let's check Homeless Cowboy bar first.</p>
+<p class='character'>LUKE</p>
+<p class='dialogue'>No, I think Gangster Prankster has the smuggler that we're looking for.</p>
+<p class='character'>MC-3FX</p>
+<p class='dialogue'>Barking Cat has the most smugglers we can find.</p>
+<p class='action'>O2-C2 beeped in agreement.</p>
+<p class='character'>MC-3FX</p>
+<p class='dialogue'>See, 2 vs 1 vs 1, we're won!</p>
+<p class='character'>HOBO VAN</p>
+<p class='dialogue'>Alright, let's go to the Barking Cat then.</p>
+<p class='scene-heading'>INT. BARKING CAT BAR</p>
+<p class='action'>Hobo Van, Luke and animals entered the bar. They were noticed by smuggler and his hairy mate. </p>
+<p class='character'>HOBO VAN</p>
+<p class='parenthetical'>(looking at the smuggler)</p>
+<p class='dialogue'>I think this is who we are looking for.</p>
+<p class='character'>LUKE</p>
+<p class='dialogue'>Alright, let's check him out.</p>
+<p class='page-break'>9.</p>
+<p class='action'>They were passing through the hall, but bartender was unhappy.</p>
+<p class='character'>BARTENDER</p>
+<p class='dialogue'>We don't serve animals. Get them out.</p>
+<p class='character'>HOBO VAN</p>
+<p class='parenthetical'>(to animals)</p>
+<p class='dialogue'>Wait for us outside. Don't go anywhere, no zoo, no cock fights. Clear?</p>
+<p class='character'>MC-3FX</p>
+<p class='dialogue'>Clear.</p>
+<p class='action'>MC-3FX and O2-C2 went outside, while Luke and Hobo Van approached the smuggler and his dog.</p>
+<p class='character'>HOBO VAN</p>
+<p class='dialogue'>We're looking for a smuggler who can smuggle us to Olderant...</p>
+<p class='character'>LUKE</p>
+<p class='dialogue'>Lololol, how did you get your dog pass this bartender?</p>
+<p class='character'>SOBAKA</p>
+<p class='dialogue'>I'm not a dog, I'm just a man with a lot of hair.</p>
+<p class='action'>Sobaka was quite irritated.</p>
+<p class='character'>LUKE</p>
+<p class='dialogue'>... and a running nose, lolol?</p>
+<p class='character'>YIKE SOLO</p>
+<p class='dialogue'>Don't mind this daring boy, Sobaka.</p>
+<p class='parenthetical'>(talking to Hobo Van)</p>
+<p class='dialogue'>How much are you willing to pay?</p>
+<p class='character'>HOBO VAN</p>
+<p class='dialogue'>Two cow steaks, three spider eyes and the ender dragon egg.</p>
+<p class='action'>Hobo Van drops every item on the table.</p>
+<p class='character'>YIKE SOLO</p>
+<p class='dialogue'>Hm... I don't need your junk, but will take your dragon egg. You'll give me another one on arrival.</p>
+<p class='page-break'>10.</p>
+<p class='character'>LUKE</p>
+<p class='dialogue'>We could buy ourself a ship on this junk...</p>
+<p class='character'>HOBO VAN</p>
+<p class='parenthetical'>(interrupting Luke)</p>
+<p class='dialogue'>Ok, agreed. When do we depart?</p>
+<p class='character'>YIKE SOLO</p>
+<p class='dialogue'>In few hours. Meanwhile you can wander around. Meet us at the space port #4.</p>
+<p class='action'>Hobo Van and Luke left the table and joined MC-3FX and O2-C2 outside. </p>
+<p class='character'>YIKE SOLO</p>
+<p class='dialogue'>Prepare the ship, Sobaka.</p>
+<p class='action'>Sobaka nodded and walked away too. Yike was about to quit the table, but he was stopped by a chicken named Greedy.</p>
+<p class='character'>GREEDY</p>
+<p class='parenthetical'>(clucking)</p>
+<p class='dialogue'>You owe me money.</p>
+<p class='character'>YIKE SOLO</p>
+<p class='dialogue'>C'mon, Greedy. I already paid you enough.</p>
+<p class='character'>GREEDY</p>
+<p class='dialogue'>Not the whole debt, though. You had visitors, eh?</p>
+<p class='character'>YIKE SOLO</p>
+<p class='dialogue'>Yes, once I deliver them Olderant, I'll pay you the rest.</p>
+<p class='character'>GREEDY</p>
+<p class='dialogue'>I seen the dragon egg. You could give it me now, and everyone would be happy.</p>
+<p class='character'>YIKE SOLO</p>
+<p class='dialogue'>No way, I'm going to give another egg once I'll deliver them.</p>
+<p class='character'>GREEDY</p>
+<p class='dialogue'>Then I'll have to kill you...</p>
+<p class='action'>Yike Solo drew a sword and killed the chicken. </p>
+</section>
+<section>
+<p class='page-break'>11.</p>
+<p class='transition'>CIRCLE CROSS FADE TO:</p>
+<p class='action'>First goes cast based on main <em>stars</em> of the movie on fade in and out basis.</p>
+<p class='action'>	McHorse<br>	McHorse<br>	McHorse<br>	McHorse<br>	McHorse<br>	McHorse<br>	and McHorse</p>
+<p class='action'>And after this, goes the full cast.</p>
+<p class='action'>	Director<br>	McHorse<br>	<br>	Producer<br>	McHorse's cat</p>
+<p class='action'>	Composer<br>	McHorse's dog</p>
+<p class='action'>	Cast<br>	Luke - McHorse (as Pink Sheep)<br>	MC-3FX - McHorse (as CrazyFoxMovies)<br>	O2-C2 - McHorse (as OwlCrafted)<br>	Princess Foxx - McHorse (as Razzlberry Fox)<br>	Uncle Shep - McHorse (as PuRplE SHeP)<br>	S2-L4 - McHorse (as CraftedMovies)<br>	Hobo Van - McHorse (as The Minebox)<br>	Yike Solo - McHorse (as YikeFilms)<br>	Sobaka - McHorse (as Vasily12345)<br>	Rat Vader - McHorse (as ExplodingTNT)<br>	Grand Nether Block - McHorse (as Netherblocked)<br>	<br>	Video Editor<br>	McHorse<br>	<br>	Sound FX<br>	McHorse's parrot</p>
+<p class='action'>	Special Thanks<br>	George Lucas<br>	Blockbuster Mod<br>	Metamorph Mod<br>	Imaginary Mod</p>
+</section>
+</article>
+</body>
+</html>
