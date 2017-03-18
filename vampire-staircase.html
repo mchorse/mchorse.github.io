@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type='text/css'>
+/*
+Copyright (c) 2012-2013 Nima Yousefi & John August
+
+Permission is hereby granted, free of charge, to any person obtaining a copy 
+of this software and associated documentation files (the "Software"), to 
+deal in the Software without restriction, including without limitation the 
+rights to use, copy, modify, merge, publish, distribute, sublicense, and/or 
+sell copies of the Software, and to permit persons to whom the Software is 
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in 
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING 
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS 
+IN THE SOFTWARE.
+*/
+
+* {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+}
+html {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #fff;
+	color: #3e3e3e;
+	font: 12px/1.0em 'Courier Prime', serif;
+	padding: 0;
+	margin: 0;
+}
+article {
+	padding: 0px 0;
+	margin: 0;
+}
+section {
+	padding: 0 0 0 40px;
+	width: 465px;
+	margin-right: auto;
+	margin-left: auto;
+}
+p {
+	margin: 1.3em auto;
+	word-wrap: break-word;
+	padding: 0 10px;
+}
+body > p:first-child {
+	margin-top: 0;
+}
+.scene-heading, .transition, .new-act, .end-of-act, .character {
+	text-transform: uppercase;
+}
+
+.transition {
+	text-align: right;
+}
+
+.new-act, .end-of-act {
+	text-align: center;
+}
+
+.character {
+	margin: 1.3em auto 0;
+	width: 180px;
+}
+
+.dialogue {
+	margin: 0 auto;
+	width: 310px;
+}
+
+.parenthetical {
+	margin: 0 auto;
+	width: 250px;
+}
+
+.scene-heading {
+	margin-top: 2.6em;
+	font-weight: bold;
+	position: relative;
+	padding-right: 40px;
+}
+.scene-number-left {
+	float: left;
+	margin-left: -50px;
+}
+.scene-number-right {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.lyrics {
+    font-style: italic;
+    text-align: center;
+}
+#script-title {
+    overflow: hidden;
+    display: block;
+    padding-bottom: 2.6em;
+    margin-bottom: 2.6em;
+}
+#script-title .title {
+    text-align: center;
+    margin: 1.3em 0;
+    text-transform: uppercase;
+}
+#script-title .credit {
+    text-align: center;
+}
+#script-title .authors {
+    text-align: center;
+}
+#script-title .source {
+    text-align: center;
+    padding-top: 1.3em;
+}
+#script-title .notes {
+    padding-top: 2.6em;
+}
+#script-title .notes {
+    white-space: pre-line !important;shape-rendering
+}
+
+.center {
+	text-align: center !important;
+}
+hr {
+    height: 0px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+.dual-dialogue {
+	overflow: hidden;
+}
+.dual-dialogue .dual-dialogue-left,
+.dual-dialogue .dual-dialogue-right {
+	width: 228px;
+	float: left;
+}
+.dual-dialogue p {
+	width: auto;
+}
+.dual-dialogue .character {
+	xtext-align: center;
+	padding-left: 40px;
+}
+.dual-dialogue .parenthetical {
+	padding-left: 40px;
+}
+p.page-break {
+    text-align: right;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+p.page-break-render {
+    text-align: right;
+    padding-top: 20px;
+    margin-top: 20px;
+}</style>
+</head>
+<body>
+<article>
+<section>
+<p class='page-break'>1.</p>
+<p class='scene-heading'>EXT. VILLAGE</p>
+<p class='action'>A testificate village appears in the plains, raining, at night. The lights are turned off everywhere, for exception in church.</p>
+<p class='character'>NARRATOR</p>
+<p class='dialogue'>There was a prophecy. When the rain falls from the sky at night, a lightning shall summon a dark entity out of this world... and the world will fall... however, there's a hope. A hero with a heart of gold will defeat the monster!</p>
+<p class='scene-heading'>INT. VILLAGE'S CHURCH</p>
+<p class='action'>Villagers sitting in the church listening to the village priest.</p>
+<p class='character'>PRIEST</p>
+<p class='dialogue'>... and may we support each other. Trade goods with people, plant new food and enjoy our living.</p>
+<p class='action'>Lightning struck in few places. Participating villagers panicked out.</p>
+<p class='character'>PRIEST</p>
+<p class='dialogue'>My god! This happening! Quick, block the door.</p>
+<p class='character'>VILLAGER</p>
+<p class='dialogue'>We cannot build!!!</p>
+<p class='character'>PRIEST</p>
+<p class='dialogue'>We're doomed!!!</p>
+<p class='scene-heading'>EXT. VILLAGE'S ENTRANCE</p>
+<p class='action'>A staircase was hit by a lightning. It turned into vampire. Fangs came out from bottom slab, wood turned pale, eyes turned red /<em> ahahaha </em>/ and a black cape appeared. Staircase is alive...</p>
+<p class='transition'>FADE OUT TO:</p>
+<p class='page-break'>2.</p>
+</section>
+<section>
+<p class='scene-heading'>INT. VILLAGE'S CHURCH</p>
+<p class='action'>Panic was still going on in the church. Priest tried to calm down the crowd.</p>
+<p class='character'>PRIEST</p>
+<p class='dialogue'>Listen, listen! The might monster already have entered the world! Please calm down, we need to find the hero who will defeat the monster...</p>
+<p class='action'>Villagers seemed to calm down a little bit. But lightnings are still hitting.</p>
+<p class='character'>PRIEST</p>
+<p class='dialogue'>Any ideas?</p>
+<p class='character'>VILLAGER #1</p>
+<p class='dialogue'>Maybe we should summon iDubbbzKnight?</p>
+<p class='character'>VILLAGER #2</p>
+<p class='dialogue'>He doesn't have a good heart. He's king's jester. What about Dan?</p>
+<p class='character'>VILLAGER #1</p>
+<p class='dialogue'>No, he's too mainstream. He's all about popularity.</p>
+<p class='character'>VILLAGER #3</p>
+<p class='dialogue'>I think Joe could be our hero...</p>
+<p class='character'>PRIEST</p>
+<p class='dialogue'>Tell me more about him.</p>
+<p class='character'>VILLAGER #3</p>
+<p class='dialogue'>He makes furniture, he's dumb a little bit, but he has a heart of gold!</p>
+<p class='character'>PRIEST</p>
+<p class='dialogue'>Hm, he may be our hero. Ok let's decide what we're going to do next...</p>
+<p class='page-break'>3.</p>
+<p class='action'>While Priest was saying this, Staircase Vampire entered the building,  and started killing villagers one by one. Villager #3 and Priest could pass him while he was killing other villagers, but as they approached the door, Vampire Staircase killed everyone.</p>
+<p class='character'>PRIEST</p>
+<p class='dialogue'>Run, my friend, find Joe! I'll stop the monster.</p>
+<p class='scene-heading'>EXT. VILLAGE</p>
+<p class='action'>Villager escaped the building and run into the forest.</p>
+<p class='scene-heading'>INT. VILLAGE'S CHURCH</p>
+<p class='action'>Vampiric Staircase was idling, and Priest was standing, blocking the door. </p>
+<p class='character'>PRIEST</p>
+<p class='dialogue'>You shall not pass monster!</p>
+<p class='action'>Priest took out the idol  and showed it to the monster.</p>
+<p class='character'>PRIEST</p>
+<p class='dialogue'>This should keep you away from the door.</p>
+<p class='action'>The moment of tension. Priest worried very much. The Staircase suddenly dashed forward and killed the Priest. Cut.</p>
+<p class='scene-heading'>EXT. OTHER VILLAGE</p>
+<p class='action'>Some time has passed, it's day already. Villager #3 appears in another village. He approaches the first villager he could find.</p>
+<p class='character'>VILLAGER #3</p>
+<p class='dialogue'>Where's Joe?!</p>
+<p class='character'>VILLAGER #1-1</p>
+<p class='dialogue'>What happened? Why you all covered in blood?</p>
+<p class='page-break'>4.</p>
+<p class='character'>VILALGER #3</p>
+<p class='dialogue'>It's a long story. I'll tell you once I find Joe. I need to find him ASAP. It's really important!</p>
+<p class='action'>Two villagers looked at each other with surprise.</p>
+<p class='character'>VILLAGER #1-1</p>
+<p class='dialogue'>He's in the blacksmith, as usual. Follow me.</p>
+<p class='action'>And Villager #1-1 walked away toward the blacksmith. Villager #3 followed him.</p>
+<p class='scene-heading'>INT. OTHER VILLAGE'S BLACKSMITH</p>
+<p class='action'>Villager #1-1 enters, and Villager #3 enters after him. Joe stands near anvil working on something metal.</p>
+<p class='character'>VILLAGER #3</p>
+<p class='dialogue'>Hello Joe! I've come here from far, to give you a quest. My village fell. Everybody died for exception of me. A monster from prophecy have arrived. You're our only hope. You have to save us! You need to defeat this monster!</p>
+<p class='character'>VILLAGER #1-1</p>
+<p class='dialogue'>The monster from prophecy? Oh my!</p>
+<p class='character'>VILLAGER #3</p>
+<p class='dialogue'>Joe is the only person I know who's has a heart of gold.</p>
+<p class='character'>JOE</p>
+<p class='dialogue'>I'm not sure if I'm ready for such fight.</p>
+<p class='character'>VILLAGER #1-1</p>
+<p class='dialogue'>We'll help you! Let's go to the priest, (talking to Villager #3) he knows more about prophecy than your priest.</p>
+<p class='action'>They all left the blacksmith. Meanwhile, something peculiar happened in the room.</p>
+<p class='page-break'>5.</p>
+</section>
+<section>
+<p class='scene-heading'>EXT. OTHER VILLAGE</p>
+<p class='action'>Joe, Villager #3 and #1-1 walked through the village towards the church. Joe fell on the ground while was going down the hill. Villagers stopped and looked a little puzzled.</p>
+<p class='character'>JOE</p>
+<p class='dialogue'>I do remember there was a slab.</p>
+<p class='action'>One slab was missing.</p>
+<p class='character'>JOE</p>
+<p class='dialogue'>Whatever, let's go.</p>
+<p class='action'>Joe walked forward while villagers followed him.</p>
+<p class='scene-heading'>INT. OTHER VILLAGE'S CHURCH</p>
+<p class='action'>Joe entered the church first, then villagers #1-1 and #3. </p>
+<p class='character'>VILLAGER #1-1</p>
+<p class='dialogue'>Your brightness, the prophecy is happening! The monster have arrived! We need your help. Tell us more you know about monster.</p>
+<p class='character'>PRIEST #1</p>
+<p class='dialogue'>Oh my! As far as I know, the monster is a vampire. How did it looked?</p>
+<p class='character'>VILLAGER #1-1</p>
+<p class='dialogue'>I don't know, this villager is only survivor.</p>
+<p class='character'>VILLAGER #3</p>
+<p class='dialogue'>It looked like a stair...</p>
+<p class='action'>Priest #1 laughed so hard he could. Villagers and Joe were puzzled.</p>
+<p class='character'>PRIEST #1</p>
+<p class='dialogue'>Haha, haha, ha... that's a nice joke! Never laughed so hard, but seriously, how did it looked, though?</p>
+<p class='page-break'>6.</p>
+<p class='character'>VILLAGER #3</p>
+<p class='parenthetical'>(irritated)</p>
+<p class='dialogue'>It looked like a stair! A spruce plank stair!</p>
+<p class='action'>Priest #1 stopped grinning. This news shocked him.</p>
+<p class='character'>PRIEST #1</p>
+<p class='dialogue'>Well, that is horrible. Alright, we need to prepare Joe for the fight. Any weapon would do no damage to a vampire, however, there's one material which exposes a vampire vulnerable, and it is silver.</p>
+<p class='action'>Priest walks backwards to his chest. He opens it, and brings a silver ingot to Joe. </p>
+<p class='character'>PRIEST #1</p>
+<p class='dialogue'>I have only one silver ingot. It's really rare. Unfortunately, you can't make sword out of one ingot. You'll need to go deep underground to gain more silver. Go to the mineshaft which is outside the village, and gather some silver ore. It's really rare. Hurry up! You don't have much time. We'll be waiting for you...</p>
+<p class='action'>Joe nods and leaves the building.</p>
+<p class='character'>PRIEST #1</p>
+<p class='dialogue'>And you two (talking to villagers), you have to warn other villagers. Invite other players to fortify the village.</p>
+<p class='action'>Two villagers nodded and left the building too. Priest turns around. </p>
+<p class='character'>PRIEST #1</p>
+<p class='dialogue'>God, please, help us!</p>
+<p class='scene-heading'>EXT. OUTSIDE OF MINESHAFT</p>
+<p class='action'>Joe runs toward the mineshaft. He stops close to the entrance, and takes out a pickaxe. He enters the mine.</p>
+<p class='page-break'>7.</p>
+</section>
+<section>
+<p class='scene-heading'>INT. MINESHAFT BASE FLOOR</p>
+<p class='action'>Joe enters the mineshaft and gets down using an elevator. Once the elevator get down, he exits, checks the clock and goes exploring the cave.</p>
+<p class='scene-heading'>INT. CAVE</p>
+<p class='action'>He explored the cave for a long time, and it's beginning very close to the evening. </p>
+<p class='character'>JOE</p>
+<p class='dialogue'>Dang, where is this silver ore.</p>
+<p class='action'>He looks around the cave surface, and finally finds a silver ore on the ceiling. He builds a dirt tower, mines the ore, goes to the crafting station and melts a silver ore into the bar of silver. He returns to the village</p>
+<p class='scene-heading'>EXT. OTHER VILLAGE</p>
+<p class='action'>Joe dashes toward the village. Players already built fortification around the village. He goes to the blacksmith.</p>
+<p class='scene-heading'>INT. OTHER VILLAGE'S BLACKSMITH</p>
+<p class='action'>Joe enters and crafts a silver sword. He approaches his chest, meanwhile priest and two villagers #3 and #1-1 entering. Joe puts an iron armor on.</p>
+<p class='character'>PRIEST</p>
+<p class='dialogue'>Fortifications are built, all villagers are in the safe place. We're counting on you, Joe.</p>
+<p class='action'>Joe draws a silver sword.</p>
+<p class='character'>PRIEST</p>
+<p class='dialogue'>Oh, you already crafted the sword! Thank god! Here are some stuff that might help you.</p>
+<p class='action'>Priest gives a golden apple to Joe.</p>
+<p class='character'>PRIEST</p>
+<p class='dialogue'>This golden apple should give you enough strength and bravery to destroy the Vampire Staircase...</p>
+<p class='page-break'>8.</p>
+<p class='action'>Villagers grin a little bit. However, when priest is about to turn, they change their faces to serious.</p>
+<p class='character'>PRIEST</p>
+<p class='dialogue'>Go, Joe! Defeat the monster, save the world!</p>
+<p class='action'>Joe approaches the door, looks with sadness on the room, and leaves the building.</p>
+<p class='scene-heading'>EXT. OTHER VILLAGE</p>
+<p class='action'>Joe approaches the gate from direction where villager #3 have arrived. </p>
+<p class='scene-heading'>EXT. OTHER VILLAGE'S GATE</p>
+<p class='action'>He passes through a door in the large gate and walks away from the gate a little bit. There's a missing slab  seen in front. He doesn't give it any attention. He looks at the setting sun, and turn his head in direction of forest. Vampire Staircase appeared.</p>
+<p class='action'>Joe equipped the shield. Vampire Staircase continued peeking at Joe. It slowly began to accelerate while Joe also started running into Vampire's direction. They began to fight, Joe couldn't reach the Staircase, it was flying around him circles, waiting for Joe to expose his back. It dashed once, Joe dropped the shield. He was trying to get a little bit higher, but Staircase dashed once more, and Joe went into air and his chest plate was broken. He was lying on the ground with his sword. Another dash, and the silver sword slipped from Joe's hand.</p>
+<p class='character'>VAMPIRIC STAIRCASE</p>
+<p class='dialogue'>Prepare to die, hero!</p>
+<p class='action'>Then out of nowhere, something slashed the vampiric staircase. It roared, and flew higher. A slab appeared in front of lying Joe, holding the silver sword. The Staircase tried to dash on slab, but slab slashed it once more, it flew up, and died in explosion.</p>
+<p class='action'>Joe was very puzzled, and at the same time he was very happy that the Vampiric Staircase was slain.</p>
+<p class='action'>The slab dropped the sword, and entered the village, Joe picked up the sword and followed it.</p>
+<p class='page-break'>9.</p>
+</section>
+<section>
+<p class='scene-heading'>EXT. OTHER VILLAGE</p>
+<p class='action'>It slid back to the place where it supposed to be. Priest and other villagers have came out of their buildings.</p>
+<p class='character'>PRIEST</p>
+<p class='dialogue'>Oh, god, you returned alive! Glory to Joe! Glory to Joe!</p>
+<p class='character'>VILLAGERS </p>
+<p class='parenthetical'>(in unison)</p>
+<p class='dialogue'>Glory to Joe! Glory to Joe!</p>
+<p class='action'>Fireworks were fired. Fade out.</p>
+<p class='action'>Joe was promoted to chief. Priest gave him a special chief outfit. Joe removed fortification and built a statue in the square of the village.</p>
+<p class='character'>NARRATOR</p>
+<p class='dialogue'>When Joe became a chief, he removed the fortifications around the village and built a statue of fallen villagers and a slab.</p>
+<p class='character'>NARRATOR</p>
+<p class='dialogue'>Even though, Joe hasn't defeated the monster, he did, however, created the slab that slain the monster. </p>
+<p class='action'>Joe in the blacksmith, was baking slabs using furnace and lava forge. He slipped one gold nugget by accident. It stuck in the slab.</p>
+<p class='character'>NARRATOR</p>
+<p class='dialogue'>When he was building the village, he once dropped a golden nugget, by accident, while making slabs. That one slab had indeed a heart of gold.</p>
+<p class='action'>The End.</p>
+</section>
+</article>
+</body>
+</html>
