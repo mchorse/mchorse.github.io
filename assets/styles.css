@@ -25,13 +25,33 @@ ul
 
 a
 {
-    color: #888;
+    color: #08f;
     text-decoration: none;
 }
 
 a:hover
 {
-    color: #aaa;
+    color: #0af;
+}
+
+p a:hover,
+td a:hover
+{
+    text-decoration: underline;
+}
+
+table
+{}
+
+table th
+{
+    text-align: left;
+}
+
+table td, 
+table th
+{
+    padding: 0.5em;
 }
 
 /* Common styles */
@@ -125,10 +145,12 @@ a:hover
     margin-bottom: 0.5em;
 }
 
-.blog_post h2
-{
-    font-size: 32px;
-}
+.blog_post h1 { font-size: 32px; }
+.blog_post h2 { font-size: 26px; }
+.blog_post h3 { font-size: 20px; }
+.blog_post h4 { font-size: 18px; }
+.blog_post h5 { font-size: 14px; }
+.blog_post h5 { font-size: 10px; }
 
 .blog_post h1,
 .blog_post h2,
@@ -235,6 +257,12 @@ a:hover
     background-position: -100px bottom;
 }
 
+.emoticons .banner
+{
+    background: url('img/emoticons/background.png');
+    background-position: center center;
+}
+
 .banner img
 {
     display: block;
@@ -250,7 +278,7 @@ a:hover
 
 .download-button
 {
-    background-color: #e9d236;
+    background-color: #ffc236;
     border-radius: 4px;
     box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.3);
     color: #000;
@@ -266,7 +294,8 @@ a:hover
 
 .download-button:hover
 {
-    background-color: #fae764;
+    background-color: #ffd764;
+    color: #000;
 }
 
 /* Footer */
