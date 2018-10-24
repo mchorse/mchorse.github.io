@@ -2,7 +2,7 @@
 <html>
     <head>
 <meta charset="utf-8">
-<title>Home &mdash; McHorse</title>
+<title>Generate access key &mdash; Emoticons &mdash; McHorse</title>
 <link href="/assets/styles.css" rel="stylesheet" type="text/css">
 
  
@@ -27,9 +27,11 @@ window.cookieconsent.initialise({
 </script> 
     </head>
 
-    <body class="">
-<div class="header">
-    <ul class="header-menu header-dark clear">
+    <body class="emoticons">
+<!-- "Logo" -->
+<div class="banner">
+    <div class="header">
+    <ul class="header-menu  clear">
      
         <li class="left" title="Home">
             <a href="/">
@@ -57,38 +59,31 @@ window.cookieconsent.initialise({
      
     </ul>
 </div> 
-
-<div class="wrapper blog_post blog_bigger">
-    <h1>Hello there!</h1>
     
-    <p>My name is McHorse, and welcome to my website! </p>
-<p>This website's purpose is to centralize information about my mods. I also might start blogging in the future. If you'd like to support me, and you like my mods, subscribe me on YouTube!</p>
-<p>Let me know if you experience any problems with my mods, or if you have any ideas how to fill all this white space with some text.</p> 
+    <img src="/assets/img/emoticons.png">
 </div>
 
-<div class="blockbuster">
-    <div class="banner">
-        <a href="/blockbuster/">
-            <img src="/assets/img/blockbuster.png">
-        </a>
+<div>
+    <div class="wrapper blog_post">
+        <h1>Generate an access key</h1>
+
+        <p>In order to use Emoticons mod, you have to generate an access key file. Simply enter your Minecraft username or UUID of your account in the text field below, and press <strong>Generate</strong> button. This will download a text file called <code>user.txt</code> (don't rename it). Drag it over to <code>.minecraft/config/emoticons/</code> and that's basically it.</p>
+        <form action="http://104.248.129.155/generate/" class="access-key-form">
+            <div>
+                <input type="text" name="username" placeholder="Your Minecraft username...">
+                <button>Generate</button><br>
+                <p class="small">For example: McHorseYT</p>
+            </div>
+        </form>
+        <p>This needs to be done only once (if you have several game directories, you need to copy files there too). If you'll run into issues (bugs or crashes), you can report either on <a href="https://twitter.com/McHorsy/" target="_blank">Twitter</a> or on my <a href="https://discord.gg/qfxrqUF" target="_blank">Discord server</a>.</p>
+        <p>You might ask, "why you made it work like this?", and the answer is quite simple. If ever heard of <a href="http://stopmodreposts.org/">Stop Mod Reposts</a> campaign, then you know there are mod repost websites which are stealing Minecraft mods. This is an experiment to see if this will deter those websites.</p>
+        <p class="small">By the way, if you came here to download the mod jar and repost it on your website... good luck dealing with user complaints.</p>
     </div>
 </div>
 
-<div class="metamorph">
-    <div class="banner">
-        <a href="/metamorph/">
-            <img src="/assets/img/metamorph-logo.png">
-        </a>
-    </div>
-</div>
-
-<div class="emoticons">
-    <div class="banner">
-        <a href="/emoticons/">
-            <img src="/assets/img/emoticons.png">
-        </a>
-    </div>
-</div>
+<script>
+    if (Cookies.get("passed") !== "true") window.location.href = "/emoticons/";
+</script>
 <div class="footer">
     <div class="wrapper">
 <div class="header">

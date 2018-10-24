@@ -135,6 +135,11 @@ table th
     margin-bottom: 1em;
 }
 
+.blog_post .small
+{
+    font-size: 12px;
+}
+
 .blog_post ul
 {
     list-style: disc;
@@ -168,7 +173,7 @@ table th
 
 .blog_post code
 {
-    background-color: #f8f8f8;
+    background-color: #e8e8e8;
     border-radius: 2px;
     font-size: 0.9em;
     font-family: Menlo, Monaco, monospace;
@@ -297,6 +302,55 @@ table th
 {
     background-color: #ffd764;
     color: #000;
+}
+
+/* Access key form */
+
+.access-key-form > div
+{
+    margin: 0px auto;
+    width: 640px;
+}
+
+.access-key-form input,
+.access-key-form button
+{
+    background: #fff;
+    border: 0px;
+    border-radius: 6px;
+    font-size: 18px;
+
+    padding: 0.5em;
+}
+
+.access-key-form input
+{
+    border: 1px solid #aaa;
+
+    margin-right: 1%;
+    width: 78%;
+}
+
+.access-key-form button
+{
+    background: #08f;
+    border: 1px solid #06f;
+    color: #fff;
+
+    width: 20%;
+}
+
+.access-key-form button:hover
+{
+    background: #0af;
+    border: 1px solid #08f;
+
+    cursor: pointer;
+}
+
+.access-key-form p
+{
+    margin-top: 0.5em;
 }
 
 /* Footer */
