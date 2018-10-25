@@ -3,7 +3,7 @@
  * Some irrevelant stuff
  */
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
 /* Global styles */
 
@@ -351,6 +351,29 @@ table th
 .access-key-form p
 {
     margin-top: 0.5em;
+}
+
+.warning
+{
+    color: #a00;
+    font-weight: 600;
+}
+
+.access-key-button
+{
+    background-color: #08f;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 0.9em;
+    
+    padding: 3px 8px;
+}
+
+.access-key-button:hover
+{
+    background-color: #0af;
+    color: #fff;
+    text-decoration: none;
 }
 
 /* Footer */
