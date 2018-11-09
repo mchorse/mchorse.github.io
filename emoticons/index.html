@@ -37,6 +37,32 @@ window.cookieconsent.initialise({
     </head>
 
     <body class="emoticons">
+<style>
+.special-thanks
+{
+    background-color: #333;
+    border-radius: 5px;font-size: 14px;
+    color: #fff;
+    
+    padding: 4px;
+    width: 200px;
+    
+    position: absolute;
+    left: 665px;
+    top: 195px;
+}
+
+.special-thanks:before
+{
+    content: " ";
+    position: absolute;
+    bottom: -20px;
+    left: calc(50% - 10px);
+    border: 10px solid transparent;
+    border-top: 10px solid #333;
+}
+</style>
+
 <!-- "Logo" -->
 <div class="banner">
     <div class="header">
@@ -74,10 +100,12 @@ window.cookieconsent.initialise({
 
 <!-- When you're too lazy to add styles in CSS -->
 <div>
-    <div class="wrapper blog_post centered" style="width: 640px;">
+    <div class="wrapper blog_post centered" style="width: 640px; position: relative; top: 0px; left: 0px;">
         <h1>Meet the Emoticons mod!</h1>
         <p style="font-size: 16px;">Emoticons is a Minecraft mod which adds custom player animations and emote system with over 35+ emotes to Minecraft.</p>
         <iframe width="640" height="360" src="https://www.youtube.com/embed/_J3jeENTDJs" frameborder="0" allowfullscreen></iframe>
+        <div class="special-thanks">Special thanks to Andruxioid!</div>
+        <img src="/assets/img/andruxioid.gif" style="position: absolute; left: 630px; top: 220px; z-index: -1;">
     </div>
 </div>
 
@@ -92,7 +120,7 @@ window.cookieconsent.initialise({
 </div>
 
 <div style="background-image: url('/assets/img/emoticons/emotes.jpg'); min-height: 400px;">
-    <div class="wrapper blog_post clear" style="margin-top: 0px;">
+    <div class="wrapper blog_post clear" style="margin-top: 0px; margin-bottom: 0px;">
         <div class="right" style="width: 60%; background: rgba(0, 0, 0, 0.75); padding: 1em; color: #fff; border-radius: 0px 0px 10px 10px;">
             <h2>Emotes</h2>
             <p>Besides adding custom animations to players, it also adds a couple of dozens emotes which can be activated by pressing dedicated key binds.</p>
@@ -105,7 +133,41 @@ window.cookieconsent.initialise({
     </div>
 </div>
 
-<div>
+<div style="background-color: #eee; padding: 1px; box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.1);">
+    <div class="wrapper blog_post" style="width: 640px">
+        <h2>F.A.Q.</h2>
+        <p>
+            <strong>Q: The mod says it was built for another user. Help?</strong><br>
+            A: You probably haven't read the instruction below, and haven't generated an access key. Go watch the installation video or read the instruction.
+        </p>
+        <p>
+            <strong>Q: I'm playing with my friends on the server, and why I can't see them emote, or they can't see me emote?</strong><br>
+            A: In order to see other people emote, the server must also install the mod. No mod on the server, no people emoting.
+        </p>
+        <p>
+            <strong>Q: Can you add support with mod X?</strong><br>
+            A: No, I won't add support with any other mods. This mod was made for fun, I don't want to turn it into my job.
+        </p>
+        <p>
+            <strong>Q: Can I add custom emotes myself?</strong><br>
+            A: No, you can't.
+        </p>
+        <p>
+            <strong>Q: Will you <em>upgrade</em> mod to 1.7.10, 1.8 or 1.9?</strong><br>
+            A: No, those versions are not supported by Forge, and generally dead.
+        </p>
+        <p>
+            <strong>Q: Will you <em>upgrade</em> mod to 1.10.2 or 1.11.2?</strong><br>
+            A: Only if there will be demand.
+        </p>
+        <p>
+            <strong>Q: Will you upgrade mod to 1.13 or up?</strong><br>
+            A: Most likely once Forge for 1.13 or above will come up.
+        </p>
+    </div>
+</div>
+
+<div>    
     <div class="wrapper blog_post" id="download-now" style="width: 640px">
         <h2>Downloads</h2>
         <p class="warning">ATTENTION: Please read the instruction carefully (which is written below). If something doesn't work, make sure you followed the instruction correctly.</p>
