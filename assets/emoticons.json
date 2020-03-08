@@ -1,5 +1,5 @@
 {
-	"homepage": "https://mchorse.github.io/emoticons/",
+	"homepage": "https://www.curseforge.com/minecraft/mc-mods/emoticons/",
 	"1.12.2": {
 		"0.4.3": "This hot patch update fixes stupid transparency issue with model when used with Optifine, because Optifine changes blending function smh.",
 		"0.4.2": "This update fixes a couple of issues with multiplayer servers (\"wallhack\" aka F3 skeleton rendering through walls and invisibility potions).",
